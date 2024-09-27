@@ -4,5 +4,3 @@ Escribir un programa que lea un entero positivo, n, introducido por el usuario y
  suma = n(n+1)/2
 """
 n = int(input("Introduce un numero entero: "))
-for i in range(1,n+1):
-    print(i)
