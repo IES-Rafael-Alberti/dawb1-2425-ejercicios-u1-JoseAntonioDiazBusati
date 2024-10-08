@@ -10,3 +10,11 @@ celsius = int(input("Ingrese el temperatura en grados Celsius: "))
 fahrenheit = (celsius * 9 /5) + 32
 print("La temperatura convertida es: "+str(fahrenheit)+"Fº.")
 """
+def pedir_grados():
+    fahrenheit = float(input("Introduce la temperatura en grados Fahrenheit: "))
+    celsius = (fahrenheit - 32) * 5/9
+    return f"{celsius:.2f}ºC ({fahrenheit:.2f}ºF)"
+
+def main():
+    temperatura = pedir_grados()
+    print(temperatura)
