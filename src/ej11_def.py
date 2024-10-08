@@ -6,6 +6,14 @@ primeros enteros positivos puede ser calculada de la siguiente forma: suma = n(n
 
 Recibe un número y retorna una cadena de caracteres con el resultado de la función.
 """
-n = int(input("Introduce un numero entero: "))
-suma = n*(n+1)/2
-print(suma)
+def pedir_num():
+    entero = int(input("Introduce  un numero entero: "))
+    return entero
+
+def main():
+    n = pedir_num()
+    suma = n*(n+1)/2
+    print("La suma de los numeros enteros es: "+str(suma))
+
+if __name__ == "__main__":
+    main()
