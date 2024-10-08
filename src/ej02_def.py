@@ -3,19 +3,19 @@ Escribe un programa para pedirle al usuario las horas de trabajo y
 el precio por hora y calcule el importe total del servicio.
 """
 def horas():
-    return int(input("Introduce las horas de trabajo: "))
+    hora = int(input("Introduce las horas de trabajo: "))
+    return hora
 
 def coste():
-    return float(input("Introduce el coste por hora: "))
+    costes = float(input("Introduce el coste por hora: "))
+    return costes
 
-def importe(importe):
-    print("Importe total: "+str(importe))
+def importe(horas_total, coste_total):
+    importe_total = horas_total * coste_total
+    return importe_total
 
 def main():
-    horas_total = horas()
-    coste_total = coste()
-    importe_total = horas_total * coste_total
-    importe(importe_total)
+   print(importe(horas(), coste()))
 
 if __name__ == '__main__':
     main()
