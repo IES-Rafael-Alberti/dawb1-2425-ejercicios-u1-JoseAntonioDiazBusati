@@ -12,11 +12,15 @@ def importe_articulo():
 def importe_iva():
     return float(input("Introduce el IVA de dicho articulo: "))
 
-def main():
+def precio():
     articulo = importe_articulo()
     iva = importe_iva()
     precio_final = articulo + (articulo * iva / 100)
-    print(f"El precio final del artículo con IVA es: {precio_final:.2f} euros")
+    return precio_final
+
+def main():
+    resultado = precio()
+    print(f"El precio final del artículo con IVA es: {resultado:.2f} euros")
 
 if __name__ == "__main__":
     main()

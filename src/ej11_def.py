@@ -10,9 +10,13 @@ def pedir_num():
     entero = int(input("Introduce  un numero entero: "))
     return entero
 
-def main():
+def suma_entero():
     n = pedir_num()
-    suma = n*(n+1)/2
+    suma = n * (n + 1) / 2
+    return suma
+
+def main():
+    suma = suma_entero()
     print("La suma de los numeros enteros es: "+str(suma))
 
 if __name__ == "__main__":
