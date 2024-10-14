@@ -3,16 +3,26 @@ import random
 objetivo = random.randint(0, 100)
 
 num = int(input("Intenta adivinar un numero del 0 al 100: "))
-contador = 5
 
-while num != objetivo or contador >= 0:
+while num != objetivo:
     if num > objetivo:
-        print("El numero es mayor que el objetivo")
-        contador -= 1
-        num = int(input("Intenta adivinar un numero del 0 al 100: "))
+        dif = num - objetivo
+        if dif <=10:
+            print("Caliente caliente, estás cerca del objetivo")
+        elif dif>=25:
+            print("Frío frío, estás lejos del objetivo")
+        else:
+            print("El numero es mayor que el objetivo")
+        num = int(input("Prueba otra vez: "))
     elif num < objetivo:
-        print("El numero es menor que el objetivo")
-        contador -= 1
-        num = int(input("Intenta adivinar un numero del 0 al 100: "))
+        dif = objetivo - num
+        if dif <= 10:
+            print("Caliente caliente, estás cerca del objetivo")
+        elif dif >= 25:
+            print("Frío frío, estás lejos del objetivo")
+        else:
+            print("El numero es menor que el objetivo")
+        num = int(input("Prueba otra vez: "))
     else:
-        print("El numero es igual que el objetivo")
+        print("Eso no es un numero")
+        num = int(input("Prueba otra vez: "))

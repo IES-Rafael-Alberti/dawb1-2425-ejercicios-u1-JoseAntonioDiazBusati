@@ -10,5 +10,5 @@ from src.ej04_def import pedir_grados
         (75.92, 24.4, "24.4ºC (75.92)ºF)")
     ]
 )
-def test_fahrenheit(fahrenheit, celsius, expected):
+def test_pedir_grados(fahrenheit, celsius, expected):
     assert pedir_grados()==expected

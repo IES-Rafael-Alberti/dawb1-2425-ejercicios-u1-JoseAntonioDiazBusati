@@ -7,13 +7,11 @@ primeros enteros positivos puede ser calculada de la siguiente forma: suma = n(n
 Recibe un número y retorna una cadena de caracteres con el resultado de la función.
 """
 def pedir_num():
-    entero = int(input("Introduce  un numero entero: "))
-    return entero
+    return int(input("Introduce un numero entero: "))
 
 def suma_entero():
     n = pedir_num()
-    suma = n * (n + 1) / 2
-    return suma
+    return n * (n + 1) / 2
 
 def main():
     suma = suma_entero()

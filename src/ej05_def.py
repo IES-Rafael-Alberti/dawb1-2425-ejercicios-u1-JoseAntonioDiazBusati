@@ -15,8 +15,7 @@ def importe_iva():
 def precio():
     articulo = importe_articulo()
     iva = importe_iva()
-    precio_final = articulo + (articulo * iva / 100)
-    return precio_final
+    return articulo + (articulo * iva / 100)
 
 def main():
     resultado = precio()

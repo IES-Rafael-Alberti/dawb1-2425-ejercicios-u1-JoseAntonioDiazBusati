@@ -7,11 +7,13 @@ y entre parántesis la temperatura en grados farenheit... ambas temperaturas con
 Por ejemplo, si introduce 212 debe retornar la cadena "100.00ºC (212.00ºF)". Dentro de la función se pedirá al usuario los grados Farenheit.
 
 """
+def pedir_fahrenheit():
+    return float(input("Introduce la temperatura en grados Fahrenheit: "))
+
 def pedir_grados():
-    fahrenheit = float(input("Introduce la temperatura en grados Fahrenheit: "))
+    fahrenheit = pedir_fahrenheit()
     celsius = (fahrenheit - 32) * 5/9
     return f"{celsius:.2f}ºC ({fahrenheit:.2f}ºF)"
 
 def main():
-    temperatura = pedir_grados()
-    print(temperatura)
+    pedir_grados()
