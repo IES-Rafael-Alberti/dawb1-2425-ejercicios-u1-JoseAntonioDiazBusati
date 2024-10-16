@@ -3,6 +3,7 @@ import random
 def pedirnumero():
     return int(input("\nIntenta adivinar un numero del 0 al 100: "))
 
+
 def comprobar_numero():
     num = pedirnumero()
     while num >=0 or num <= 100:
@@ -23,6 +24,16 @@ def diferencial(objetivo: random, numero: int):
         return numero-objetivo
 
 
+def cercania(dif = type[int]):
+        diferencia = dif
+        if diferencia <= 3:
+            print("Te estás quemando, el objetivo está muy cerca.")
+        elif diferencia <= 10:
+            print("Caliente caliente, estás cerca del objetivo.")
+        elif diferencia >= 25:
+            print("Frío frío, estás lejos del objetivo.")
+
+
 def main():
     objetivo = random.randint(0, 100)
     intentos = 1
@@ -31,25 +42,12 @@ def main():
         numero = comprobar_numero()
         dif = diferencial(objetivo, numero)
         if numero > objetivo:
-            if dif <= 3:
-                print("Te estás quemando, el objetivo está muy cerca.")
-            elif dif <= 10:
-                print("Caliente caliente, estás cerca del objetivo.")
-            elif dif >= 25:
-                print("Frío frío, estás lejos del objetivo.")
-            else:
-                print("El numero es mayor que el objetivo.")
+            cercania(dif)
+            print("El numero es mayor que el objetivo.")
             intentos += 1
         elif numero < objetivo:
-            if numero < objetivo:
-                if dif <= 3:
-                    print("Te estás quemando, el objetivo está muy cerca.")
-                elif dif <= 10:
-                    print("Caliente caliente, estás cerca del objetivo.")
-                elif dif >= 25:
-                    print("Frío frío, estás lejos del objetivo.")
-                else:
-                    print("El numero es menor que el objetivo.")
+            cercania(dif)
+            print("El numero es menor que el objetivo.")
             intentos += 1
         else:
             print("\nLO HAS CONSEGUIDO!!!")
