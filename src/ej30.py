@@ -19,6 +19,6 @@ while total <= 0:
     print("No puede ser 0 o menos. Intentalo de nuevo!!")
     total = int(input("Vuelve a introducir el total de la serie: "))
 
-for inicio in range(inicio,total+1):
+for inicio in range(inicio,total+1,incremento):
     print(inicio)
     inicio += incremento
